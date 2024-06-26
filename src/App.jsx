@@ -31,7 +31,7 @@ export const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="table-container">
       {error && <div>An error has occured: {error}</div>}
       {!expenses.length ? (
         <div>No expenses available</div>

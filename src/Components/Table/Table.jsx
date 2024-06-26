@@ -1,6 +1,7 @@
 import { TableContent } from "./TableContent";
 import { TableHeadings } from "./TableHeadings";
 import PropTypes from "prop-types";
+import './table.css';
 
 export const Table = ({ tableData }) => {
   const orderedHeadings = [
@@ -12,7 +13,7 @@ export const Table = ({ tableData }) => {
     "status",
   ];
   return (
-    <table>
+    <table className="table">
       <TableHeadings headings={orderedHeadings} />
       <TableContent headings={orderedHeadings} tableData={tableData} />
     </table>

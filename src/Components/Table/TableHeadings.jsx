@@ -1,3 +1,4 @@
+import { capitaliseFirstLetter } from "../../utils/capitaliseFirstLetter";
 import PropTypes from "prop-types";
 
 export const TableHeadings = ({ headings }) => {
@@ -5,8 +6,8 @@ export const TableHeadings = ({ headings }) => {
     <thead>
       <tr>
         {headings.map((heading) => (
-          <th key={heading}>
-            {heading}
+          <th key={heading} className="table-headings">
+            {capitaliseFirstLetter(heading)}
           </th>
         ))}
       </tr>

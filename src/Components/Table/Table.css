@@ -1,0 +1,12 @@
+.table {
+    width: 100%;
+}
+
+.table-cell {
+    padding: 8px;
+}
+
+.table-headings {
+    padding: 8px;
+    text-align: left;
+}
