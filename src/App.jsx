@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { Table } from "./Components/Table/Table";
 
 export const App = () => {
   const [expenses, setExpenses] = useState([]);
@@ -29,8 +30,19 @@ export const App = () => {
     fetchData();
   }, []);
 
-  console.log(expenses)
-
-  return <table>Empty table</table>;
+  return (
+    <div>
+      {error && <div>An error has occured: {error}</div>}
+      {!expenses.length ? (
+        <div>No expenses available</div>
+      ) : (
+        <div>
+          <h1>Expenses</h1>
+          <hr />
+          <Table tableData={expenses} />
+        </div>
+      )}
+    </div>
+  );
 };
 export default App;
